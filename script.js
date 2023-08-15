@@ -32,18 +32,18 @@ const lookup = {
 };
 
 function rot13(eStr) {
-  let decodedArr = []; // Your Result goes here
+  let decoded = " "; // Your Result goes here
   // Only change code below this line
    for(var i =0;i<eStr.length;i++){
 	var asciiNum = eStr[i].charCodeAt();
 	   if(asciiNum>=65&&asciiNum<=77){
-		   decodedArr.unshift(String.fromcharCode(asciiNum+13));
+		decoded+=String.fromcharCode(asciiNum+13);
 	   }
 	   else if(asciiNum>=78&&asciiNum<=90){
-		   decodedArr.unshift(String.fromcharCode(asciiNum-13));
+		  decoded+=String.fromcharCode(asciiNum+13);
 	   }
    }
-  return; //return decodedArr
+  return decoded; //return decodedArr
 }
 
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
