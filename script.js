@@ -40,7 +40,7 @@ function rot13(eStr) {
 		decoded+=String.fromcharCode(asciiNum+13);
 	   }
 	   else if(asciiNum>=78&&asciiNum<=90){
-		  decoded+=String.fromcharCode(asciiNum+13);
+		  decoded+=String.fromcharCode(asciiNum-13);
 	   }
    }
   return decoded; //return decodedArr
