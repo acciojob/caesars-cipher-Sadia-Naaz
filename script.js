@@ -36,12 +36,7 @@ function rot13(eStr) {
   // Only change code below this line
    for(var i =0;i<eStr.length;i++){
 	var asciiNum = eStr[i].charCodeAt();
-	   if(asciiNum>=65&&asciiNum<=77){
-		decoded+=String.fromcharCode(asciiNum+13);
-	   }
-	   else if(asciiNum>=78&&asciiNum<=90){
-		  decoded+=String.fromcharCode(asciiNum-13);
-	   }
+	   decoded += lookup[char] || char;
    }
   return decoded; //return decodedArr
 }
@@ -52,3 +47,6 @@ function rot13(eStr) {
 
 // Do not change this line
 window.rot13 = rot13;
+const encodedString = "GUR DHVPX OEBJA SBK WHZCF BIRE GUR YNML QBT";
+const decodedString = rot13(encodedString);
+console.log(decodedString);
